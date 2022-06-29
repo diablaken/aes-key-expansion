@@ -22,12 +22,12 @@ Rcon = [0x00000000, 0x01000000, 0x02000000,
 
 
 def keyExpansion(key):
-    w = [()] * 44
+    w = [()] * 16
 
     for i in range(4):
         w[i] = (key[4 * i], key[4 * i + 1], key[4 * i + 2], key[4 * i + 3])
 
-    for i in range(4, 44):
+    for i in range(4, 16):
         temp = w[i - 1]
         word = w[i - 4]
 
